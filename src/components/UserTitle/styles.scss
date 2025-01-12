@@ -1,0 +1,15 @@
+.wrapperUserTitle{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    background-color: white;
+    color: gray;
+    padding: 1em;
+    border-radius: 10px;
+
+    p{
+        margin: 0;
+        color: #46a0f3;
+        font-weight: 600;
+    }
+}
