@@ -1,18 +1,9 @@
-import { Stack, Box, FormControlLabel, Switch, Button } from "@mui/material";
+import { Stack, Box, FormControlLabel, Switch } from "@mui/material";
 import TextField from "@mui/material/TextField";
-import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
-import HistoryIcon from "@mui/icons-material/History";
-import { useNavigate } from 'react-router-dom';
-import { useCustomNavigate } from "../../../Ultil/globals";
 import "./styles.scss";
 import "../../../styles/config.scss";
 
 export function DataBasic(user) {
-    const navigate = useNavigate();
-    const goBack = () => {
-        navigate('/');
-      };
-  
   return (
     <Box className="wrapperDatabasic">
       <Stack className="codUser">
@@ -64,26 +55,6 @@ export function DataBasic(user) {
           className="label"
         />
       </Stack>
-      <Stack className="buttonCancelContainer">
-        <Button
-          variant="contained"
-          className="custom-button"
-          color="error"
-          onClick={goBack}
-        >
-          Cancelar
-        </Button>
-      </Stack>
-      <Box className="wrapperInfo">
-        <Stack className="info">
-          <AddCircleOutlineIcon />
-          <Stack>Z07821 em 12/07/2024 18:10:31</Stack>
-        </Stack>
-        <Stack className="info">
-          <HistoryIcon />
-          <Stack>Admin em 01/08/2024 10:42:53</Stack>
-        </Stack>
-      </Box>
     </Box>
   );
 }

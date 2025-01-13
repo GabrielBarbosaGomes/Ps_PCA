@@ -1,5 +1,13 @@
 import { useParams } from "react-router-dom";
-import { AppBar, Tabs, Tab, Typography, Box, Stack } from "@mui/material";
+import {
+  AppBar,
+  Tabs,
+  Tab,
+  Typography,
+  Box,
+  Stack,
+  Button,
+} from "@mui/material";
 import { UserTitle } from "../../components/UserTitle/Index";
 import { DataBasic } from "./DataBasic/index";
 import { AccessLogs } from "./AccessLogs/index";
@@ -9,6 +17,9 @@ import "./styles.scss";
 import { useState } from "react";
 import PropTypes from "prop-types";
 import data from "../../assets/mock/users.json";
+import { useNavigate } from "react-router-dom";
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
+import HistoryIcon from "@mui/icons-material/History";
 
 function TabPanel({ children, value, index }) {
   return (
@@ -19,7 +30,7 @@ function TabPanel({ children, value, index }) {
       aria-labelledby={`tab-${index}`}
     >
       {value === index && (
-        <Box p={3} className="wrapperPanel">
+        <Box className="wrapperPanel">
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -34,6 +45,10 @@ TabPanel.propTypes = {
 
 export function UserConfig() {
   const { id } = useParams();
+  const navigate = useNavigate();
+  const goBack = () => {
+    navigate("/");
+  };
   const current = data.filter((d) => d.id == id)[0];
 
   const [value, setValue] = useState(0);
@@ -42,8 +57,8 @@ export function UserConfig() {
 
   const tabs = [
     { label: "Dados Básicos", content: <DataBasic user={current} /> },
-    { label: "Perfis", content: <Profiles/> },
-    { label: "Logs de Acesso", content: <AccessLogs/> },
+    { label: "Perfis", content: <Profiles /> },
+    { label: "Logs de Acesso", content: <AccessLogs /> },
   ];
 
   return (
@@ -78,6 +93,28 @@ export function UserConfig() {
             </TabPanel>
           ))}
         </Box>
+        <Stack className="buttonCancelContainer">
+          <Button
+            variant="contained"
+            className="custom-button"
+            color="error"
+            onClick={goBack}
+          >
+            Cancelar
+          </Button>
+        </Stack>
+        {value === 0 && (
+          <Box className="wrapperInfo">
+            <Stack className="info">
+              <AddCircleOutlineIcon />
+              <Stack>Z07821 em 12/07/2024 18:10:31</Stack>
+            </Stack>
+            <Stack className="info">
+              <HistoryIcon />
+              <Stack>Admin em 01/08/2024 10:42:53</Stack>
+            </Stack>
+          </Box>
+        )}
       </Stack>
     </Box>
   );

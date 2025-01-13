@@ -1,13 +1,8 @@
 import "../../../styles/config.scss";
 import "./styles.scss";
-import { Stack, Box, FormControlLabel, Switch, Button } from "@mui/material";
-import { useNavigate } from 'react-router-dom';
+import { Stack, FormControlLabel, Switch } from "@mui/material";
 
 export function Profiles() {
-    const navigate = useNavigate();
-    const goBack = () => {
-        navigate('/');
-      };
   return (
     <>
       <Stack className="switchAction warapperProfile">
@@ -38,11 +33,6 @@ export function Profiles() {
           label="Suporte"
           className="label"
         />
-      </Stack>
-      <Stack className="buttonCancelContainer">
-        <Button variant="contained" className="custom-button" color="error" onClick={goBack}>
-          Cancelar
-        </Button>
       </Stack>
     </>
   );
