@@ -2,11 +2,11 @@ import { Box, Breadcrumbs as MuiBreadcrumbs, Link, Typography } from "@mui/mater
 import "./styles.scss";
 import React from "react";
 
-export function Breadcrumbs({link,page}) {
+export function Breadcrumbs({page}) {
   return (
     <Box>
       <MuiBreadcrumbs className="wrapperBreadcrumber">
-        <Link underline="hover" href={link}>{page}</Link>
+        <Link underline="hover">{page}</Link>
       </MuiBreadcrumbs>
     </Box>
   );

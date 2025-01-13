@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "auth": "Senha",
+    "status": "Erro",
+    "data": "12/12/2024",
+    "erro": "Erro ao lorem ypsum"
+  },
+  {
+    "id": 2,
+    "auth": "API",
+    "status": "Sucesso",
+    "data": "30/12/2024",
+    "erro": ""
+  },
+  {
+    "id": 3,
+    "auth": "API",
+    "status": "Sucesso",
+    "data": "30/07/2024",
+    "erro": ""
+  }
+]

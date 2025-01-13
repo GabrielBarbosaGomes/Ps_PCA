@@ -1,27 +1,172 @@
 :root {
-    --font-size-h1: 2rem;
-    --font-size-h2: 1.5rem;
-    --font-size-md: 1.25rem;
-    --font-size-sm: 1rem;
-    --color-white: white;
-    --color-gray: #80808087;
-    --color-black: #000;
-    --color-blue: #46a0f3;
+  --font-size-h1: 2rem;
+  --font-size-h2: 1.5rem;
+  --font-size-md: 1.25rem;
+  --font-size-sm: 1rem;
+  --color-white: white;
+  --color-gray: #80808087;
+  --color-black: #000;
+  --color-blue: #46a0f3;
+  --color-green: #2eca45;
+  --color-red: #d32f2f;
+  --color-red-light: #d32f2f7a;
 }
 
-@media (min-width: 1024px){
-    :root {
-        --font-size-h1: 3.5rem;
+@media (min-width: 1024px) {
+  :root {
+    --font-size-h1: 3.5rem;
+  }
+}
+
+.wrapperContent {
+  display: flex;
+  height: 100vh;
+}
+
+.buttonCancelContainer {
+  display: flex !important;
+  flex-direction: row-reverse !important;
+
+  .custom-button {
+    font-weight: 600;
+    color: var(--color-red);
+    background-color: var(--color-red-light);
+  }
+}
+
+html {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--color-gray);
+}
+
+.switchAction {
+  width: max-content;
+}
+
+.css-19opgx6-MuiFormControlLabel-root {
+  margin-left: 0;
+  gap: 0.5em;
+
+  .css-1mdgh69-MuiSwitch-root {
+    margin-right: 5px;
+  }
+}
+
+.label .MuiFormControlLabel-label {
+    font-weight: 600;
+  }
+
+.IOSSwitch {
+  width: 42px !important;
+  height: 26px !important;
+  padding: 0 !important;
+
+  .MuiSwitch-switchBase {
+    padding: 0;
+    margin: 2px;
+    transition-duration: 300ms;
+
+    &.Mui-checked {
+      transform: translateX(16px);
+      color: var(--color-white);
+
+      & + .MuiSwitch-track {
+        background-color: var(--color-green);
+        opacity: 1;
+        border: 0;
+
+        @media (prefers-color-scheme: dark) {
+          background-color: var(--color-green);
+        }
+      }
+
+      &.Mui-disabled + .MuiSwitch-track {
+        opacity: 0.5;
+      }
     }
-}
 
-.wrapperContent{
-    display: flex;
-    height: 100vh;
-}
+    &.Mui-focusVisible .MuiSwitch-thumb {
+      color: var(--color-green);
+      border: 6px solid var(--color-white);
+    }
 
-html{
-    font-size: 16px;
-    font-family: 'Montserrat', sans-serif;
+    &.Mui-disabled .MuiSwitch-thumb {
+      color: var(--color-white);
+
+      @media (prefers-color-scheme: dark) {
+        color: var(--color-gray);
+      }
+    }
+
+    &.Mui-disabled + .MuiSwitch-track {
+      opacity: 0.7;
+
+      @media (prefers-color-scheme: dark) {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  .MuiSwitch-thumb {
+    box-sizing: border-box;
+    width: 22px;
+    height: 22px;
+  }
+
+  .MuiSwitch-track {
+    border-radius: 13px;
     background-color: var(--color-gray);
+    opacity: 1;
+    transition: background-color 500ms;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-gray);
+    }
+  }
+}
+
+.wrapperGrid {
+  height: 400px;
+  width: 100%;
+  box-shadow: none !important;
+}
+
+.datagrid {
+  border: none !important;
+
+  .css-yseucu-MuiDataGrid-columnHeaderRow {
+    background: aliceblue !important;
+
+    .css-1gqmilo-MuiDataGrid-columnHeaderTitle {
+      font-weight: 600;
+    }
+  }
+
+  /* Remover a borda da tabela */
+  .MuiDataGrid-root {
+    border: none !important;
+  }
+
+  /* Remover a borda das células */
+  .MuiDataGrid-cell {
+    border: none !important;
+  }
+
+  /* Remover a borda do cabeçalho */
+  .MuiDataGrid-columnHeaders {
+    border-bottom: none !important;
+  }
+
+  .css-1tdeh38 {
+    border: none !important;
+  }
+
+  .MuiDataGrid-withBorderColor {
+    border: none !important;
+  }
+
+  .MuiDataGrid-columnSeparator--sideRight {
+    display: none !important;
+  }
 }
