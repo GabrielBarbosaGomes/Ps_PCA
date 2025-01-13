@@ -1,0 +1,36 @@
+.wrapperDatabasic {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  .codUser {
+    color: var(--color-gray);
+    padding-left: 1em;
+    span {
+      color: var(--color-black);
+    }
+  }
+
+  .wrapperDataEdit {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1em;
+
+    .textfield-custom {
+      .MuiOutlinedInput-root {
+        &.Mui-focused fieldset {
+          border-color: var(--color-gray);
+        }
+      }
+
+      .MuiInputLabel-root {
+        color: var(--color-gray);
+
+        &.Mui-focused {
+          color: var(--color-gray);
+        }
+      }
+    }
+  }
+
+  
+}

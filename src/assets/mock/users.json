@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "Login": "172y7",
+    "Nome": "Jon",
+    "NivelAcesso": "Global",
+    "Ativo": "sim",
+    "AtualizadoPor": "Admin",
+    "AtualizadoEm": "12/12/12",
+    "Autenticacao": "senha"
+  },
+  {
+    "id": 2,
+    "Login": "172y7344",
+    "Nome": "Jon",
+    "NivelAcesso": "Global",
+    "Ativo": "sim",
+    "AtualizadoPor": "Admin",
+    "AtualizadoEm": "12/12/12",
+    "Autenticacao": "senha"
+  },
+  {
+    "id": 3,
+    "Login": "172y73425445",
+    "Nome": "Jon",
+    "NivelAcesso": "Global",
+    "Ativo": "não",
+    "AtualizadoPor": "Admin",
+    "AtualizadoEm": "12/12/12",
+    "Autenticacao": "senha"
+  }
+]

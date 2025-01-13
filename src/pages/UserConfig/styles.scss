@@ -1,0 +1,38 @@
+.wrapperUserConfig {
+  flex: 1;
+  overflow-y: hidden;
+
+  .wrapperContentConfig{
+      background-color: var(--color-white);
+        margin: 1em;
+        border-radius: 5px;
+        padding: 1em;
+
+        .css-12ysj7f-MuiPaper-root-MuiAppBar-root{
+            box-shadow: none !important;
+            background-color: var(--color-white);
+        }
+
+        .css-hmk518-MuiButtonBase-root-MuiTab-root{
+            color: var(--color-gray);
+            font-weight: 600;
+        }
+  }
+}
+
+.wrapperPanel{
+    padding-bottom: 0 !important;
+    padding: 24px !important;
+}
+
+.wrapperInfo {
+    display: flex;
+    gap: 3em;
+    justify-content: center;
+
+    .info {
+      display: flex;
+      flex-direction: row;
+      gap: 0.5em;
+    }
+  }

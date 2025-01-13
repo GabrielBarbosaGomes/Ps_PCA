@@ -1,0 +1,13 @@
+.wrapperBreadcrumber{
+    a {
+        &:hover {
+          color: darkblue; 
+          text-decoration: underline; 
+        }
+      }
+    
+      .MuiTypography-root {
+        color: rgb(56, 55, 55);
+        font-weight: 600;
+      }
+}
