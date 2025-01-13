@@ -3,10 +3,10 @@
     --font-size-h2: 1.5rem;
     --font-size-md: 1.25rem;
     --font-size-sm: 1rem;
-    --color-white: #EBEFF2;
-    --color-tertiary: #D2D4D9;
-    --color-secundary: #AFAFAF;
-    --color-primary: #1D2527;
+    --color-white: white;
+    --color-gray: #80808087;
+    --color-black: #000;
+    --color-blue: #46a0f3;
 }
 
 @media (min-width: 1024px){
@@ -23,5 +23,5 @@
 html{
     font-size: 16px;
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--color-white);
+    background-color: var(--color-gray);
 }

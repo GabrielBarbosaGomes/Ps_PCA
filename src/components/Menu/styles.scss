@@ -3,11 +3,11 @@
     flex-direction: column;
     align-items: center;
     width: 5em;
-    background-color: white;
+    background-color: var(--color-white);
     border-radius: 0 10px 10px 0;
     margin: 0 5px 0 0;
     gap: 2em;
     font-size: x-small;
     padding-top: 2em;
-    color: gray;
+    color: var(--color-gray);
 }

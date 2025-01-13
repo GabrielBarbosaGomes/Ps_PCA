@@ -1,6 +1,68 @@
 .wrapperUserSearch {
-  flex: 1; 
-  //padding: 20px; 
-  background-color: #e9ecef; 
-  overflow-y: auto;
+  flex: 1;
+  //background-color: var(--color-gray);
+  overflow-y: hidden;
+
+  .wrapperContentSearch {
+    background-color: var(--color-white);
+    margin: 1em;
+    border-radius: 5px;
+    //height: 100%;
+    padding: 1em;
+
+    .wrapperSearch {
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      gap: 1em;
+      margin: 2em;
+      color: var(--color-gray);
+
+      .textfield-custom {
+        .MuiOutlinedInput-root {
+          &.Mui-focused fieldset {
+            border-color: var(--color-gray);
+          }
+        }
+
+        .MuiInputLabel-root {
+          color: var(--color-gray);
+
+          &.Mui-focused {
+            color: var(--color-gray);
+          }
+        }
+      }
+    }
+
+    .datagrid {
+        border: none !important;
+      /* Remover a borda da tabela */
+      .MuiDataGrid-root {
+        border: none !important;
+      }
+
+      /* Remover a borda das células */
+      .MuiDataGrid-cell {
+        border: none !important;
+      }
+
+      /* Remover a borda do cabeçalho */
+      .MuiDataGrid-columnHeaders {
+        border-bottom: none !important;
+      }
+
+      .css-1tdeh38{
+        border: none !important;
+      }
+
+      .MuiDataGrid-withBorderColor{
+        border: none !important;
+      }
+
+      .MuiDataGrid-columnSeparator--sideRight{
+        display: none !important;
+      }
+    }
+  }
 }
